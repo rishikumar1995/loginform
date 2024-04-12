@@ -9,7 +9,7 @@ public class MyConnection {
             Connection connect = null;
             try{
 
-                //Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.jdbc.Driver");
 
                 String url ="jdbc:mysql://localhost:3306/registrationdetails?useSSL=false";
                 String username = "root";

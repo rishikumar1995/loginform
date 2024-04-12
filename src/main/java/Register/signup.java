@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -39,7 +38,7 @@ public class signup extends HttpServlet {
 
            if (count>0){
                resp.setContentType("text/html");
-               out.print("<h3 style='color:green'>Register Successfully</h3>");
+               out.print("<h3 style='color:yellow' align='center' padding-top=5px>Register Successfully</h3>");
                RequestDispatcher rd=req.getRequestDispatcher("/index.jsp");
                rd.include(req,resp);
            }else{

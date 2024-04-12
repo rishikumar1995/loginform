@@ -14,11 +14,11 @@
     <input type="checkbox" id="check">
     <div class="login form">
         <header>Login</header>
-        <form action="loginform" method="get">
+        <form action="loginform" method="post">
             <input type="text" name="get_email" placeholder="Enter your email">
             <input type="password" name="get_password" placeholder="Enter your password">
             <%--<a href="#">Forgot password?</a>--%>
-            <input type="button" class="button" value="Login">
+            <input type="submit" class="button" value="Login">
         </form>
         <div class="signup">
         <span class="signup">Don't have an account?
