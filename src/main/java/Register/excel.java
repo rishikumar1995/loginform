@@ -61,11 +61,12 @@ public class excel extends HttpServlet {
             rowno= 5;
             for (String columnn_name: columnname){
 
-                setValueInCell(sheet, cellFormat, cellno++, rowno, "columnn_name");
+                setValueInCell(sheet, cellFormat, cellno, rowno, columnn_name);
+                setValueInCell(sheet, cellFormat, cellno++, rowno+1, data_map.get(columnn_name));
             }
 
             //sheet.mergeCells(cellno, rowno, cellno, rowno + 1);
-            setValueInCell(sheet, cellFormat, cellno++, rowno, "Checking");
+            setValueInCell(sheet, cellFormat, cellno++, rowno,"");
             workBook.write();
             workBook.close();
 
