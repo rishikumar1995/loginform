@@ -14,7 +14,7 @@
             text-align: center;
         }
         .container {
-            max-width: 600px;
+            width: 100%;
             margin: 0 auto;
         }
         table {
@@ -29,6 +29,13 @@
         }
         th {
             background-color: #f2f2f2;
+        }
+        .custom-button {
+            margin-top: -12px;
+            float: right;
+        }
+        .form input{
+            padding-top: 1px;
         }
     </style>
 </head>
@@ -46,8 +53,10 @@
             <td><%= session.getAttribute("UserEmail")%></td>
             <td><%= session.getAttribute("UserMobNo")%></td>
         </tr>
-        <!-- Add more rows for additional user details -->
     </table>
 </div>
+<form action="excel" method="get">
+    <input type="submit" class="excel" value="Export to Excel">
+</form>
 </body>
 </html>
